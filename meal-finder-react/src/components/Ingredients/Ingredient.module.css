@@ -1,0 +1,13 @@
+.ingredient {
+  background-color: #fff;
+  color: #2d2013;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  margin-top: 0.8rem;
+  border-radius: 0.4rem;
+}
+
+.ingredient:not(:last-child) {
+  margin-right: 0.8rem;
+}

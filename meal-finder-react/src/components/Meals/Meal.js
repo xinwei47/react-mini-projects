@@ -3,12 +3,12 @@ import classes from './Meal.module.css';
 
 const Meal = (props) => {
   return (
-    <section className={classes.meal} id="meal">
-      <h2 className="meal__heading heading--2">{props.meal.strMeal}</h2>
-      <div className={classes['meal__img-container']}>
+    <section className={classes.meal} id='meal'>
+      <h2 className='meal__heading heading--2'>{props.meal.strMeal}</h2>
+      <div className={classes['meal__img-box']}>
         <img
           src={props.meal.strMealThumb}
-          alt=""
+          alt=''
           className={classes['meal__img']}
         />
       </div>
@@ -19,7 +19,7 @@ const Meal = (props) => {
       <div className={classes['meal__instructions']}>
         {props.meal.strInstructions}
       </div>
-      <h3 className="heading--3">Ingredients</h3>
+      <h3 className='heading--3'>Ingredients</h3>
       <Ingredients ingredients={props.ingredients} />
     </section>
   );

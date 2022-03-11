@@ -1,0 +1,36 @@
+.meal {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meal__img-box {
+  margin-top: 2.4rem;
+  width: 300px;
+}
+
+.meal__img {
+  width: 100%;
+  height: 100%;
+}
+
+.meal__summary {
+  border: 1px dashed #fff;
+  width: 50rem;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 2.4rem;
+}
+
+.meal__summary > p:last-child {
+  margin-top: 1rem;
+}
+
+.meal__instructions {
+  margin: 3.2rem 0;
+}

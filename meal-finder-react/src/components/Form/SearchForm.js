@@ -21,15 +21,19 @@ const SearchForm = (props) => {
   };
 
   return (
-    <form action="" className={classes['search-form']}>
+    <form action='' className={classes['search-form']}>
       <FormInput
-        type="text"
-        name="search-input"
+        type='text'
+        name='search-input'
         className={classes['search-form__input']}
         onChange={valueChangeHandler}
-        placeholder="Search for meals or keywords"
+        placeholder='Search for meals or keywords'
       />
-      <Button type="submit" className="" onClick={formSubmitHandler}>
+      <Button
+        type='submit'
+        className={classes['search-form__btn']}
+        onClick={formSubmitHandler}
+      >
         Search
       </Button>
     </form>

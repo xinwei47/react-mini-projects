@@ -4,12 +4,12 @@ import classes from './Meals.module.css';
 
 const Meals = (props) => {
   return (
-    <ul className={`${classes.gallery} ${props.className}`}>
+    <ul className={classes.meals}>
       {props.data.map((meal, ind) => {
         return (
           <Card
             key={`meal-${ind}`}
-            href="#meal"
+            href='#meal'
             onLinkClicked={() => props.onLinkClicked(meal)}
             image={meal.strMealThumb}
             title={meal.strMeal}

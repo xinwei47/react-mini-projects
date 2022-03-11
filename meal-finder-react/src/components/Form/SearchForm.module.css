@@ -1,6 +1,24 @@
 .search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 0.4rem;
+  overflow: hidden;
+  margin-right: 0.4rem;
 }
 
 .search-form__input {
+  padding: 0.8rem 1rem;
+  border: none;
   width: 300px;
+}
+
+.search-form__input::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-form__btn {
+  border: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0px 0.4rem 0.4rem 0px;
 }
