@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 import FormInput from './FormInput';
-import Button from '../Button/Button';
+import Button from '../UI/Button/Button';
 import classes from './SearchForm.module.css';
 
 const SearchForm = (props) => {
