@@ -1,0 +1,14 @@
+.newTransForm__annotation {
+  display: block;
+}
+
+.newTransForm__btn {
+  margin-top: 1.6rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: turquoise;
+  color: #fff;
+  font-size: 1.6rem;
+  border: none;
+  padding: 1rem 0;
+}

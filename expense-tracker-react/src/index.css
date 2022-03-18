@@ -18,7 +18,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   box-sizing: border-box;
-
+  padding: 0 4rem;
   display: flex;
   justify-content: center;
 }
@@ -37,4 +37,9 @@ h3 {
 
 section {
   margin-top: 4rem;
+}
+
+section:not(:first-child) > h2 {
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }

@@ -1,23 +1,23 @@
 import Stats from '../UI/Stats/Stats';
 import classes from './StatsSummary.module.css';
 
-const StatsSummary = () => {
+const StatsSummary = (props) => {
   return (
     <div className={classes['stats-container']}>
       <Stats
         statsClassName={classes.income}
         statsHeadingClassName={classes.income__heading}
         statsDataClassName={classes.income__amt}
-        data="100"
+        data={`$${props.income}`}
       >
         Income
       </Stats>
 
       <Stats
-        statsClassName={classes.expenes}
-        statsHeadingClassName={classes.expenes__heading}
-        statsDataClassName={classes.expenes__amt}
-        data="-60"
+        statsClassName={classes.expense}
+        statsHeadingClassName={classes.expense__heading}
+        statsDataClassName={classes.expense__amt}
+        data={`$${props.expense}`}
       >
         Expense
       </Stats>

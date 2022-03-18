@@ -1,0 +1,48 @@
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) min-content;
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.8rem;
+
+  position: relative;
+}
+
+.item__btn {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: -2rem;
+  transform: translateY(50%);
+  border: none;
+  background-color: red;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.item:hover .item__btn {
+  opacity: 1;
+}
+
+.item__name,
+.item__amt {
+  padding: 1rem;
+}
+
+.item__amt {
+  justify-self: end;
+}
+
+.item__mark {
+  width: 4px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}

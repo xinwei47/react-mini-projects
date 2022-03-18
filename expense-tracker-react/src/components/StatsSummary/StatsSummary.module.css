@@ -1,0 +1,37 @@
+.stats-container {
+  margin-top: 3.2rem;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.income,
+.expense {
+  padding: 0 3.2rem;
+}
+
+.income__heading {
+}
+
+.income__amt,
+.expense__amt {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.income__amt {
+  color: #2ecc71;
+}
+
+.expense {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.expense__heading {
+}
+
+.expense__amt {
+  color: #c0392b;
+}

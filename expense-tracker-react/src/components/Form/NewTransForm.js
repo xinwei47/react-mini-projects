@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FormInput from './FormInput';
+import classes from './NewTransForm.module.css';
 
-const NewTransForm = () => {
+const NewTransForm = (props) => {
   const [transName, setTransName] = useState('');
   const [transAmt, setTransAmt] = useState('');
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(transName);
-    console.log(transAmt);
+
+    const trans = {
+      id: Math.floor(Math.random() * 100000),
+      name: transName,
+      amt: transAmt,
+    };
+    props.onNewTrans(trans);
+    setTransName('');
+    setTransAmt('');
   };
 
   const textInputHandler = (event) => {
@@ -20,7 +28,11 @@ const NewTransForm = () => {
   };
 
   return (
-    <form action="" onSubmit={formSubmitHandler}>
+    <form
+      action=""
+      onSubmit={formSubmitHandler}
+      className={classes.newTransForm}
+    >
       <FormInput
         type="text"
         placeholder="Enter text..."
@@ -37,13 +49,15 @@ const NewTransForm = () => {
         onChange={amtInputHandler}
       >
         Amount
-        <span>(negative - expense, positive - income)</span>
+        <span className={classes.newTransForm__annotation}>
+          (negative - expense, positive - income)
+        </span>
       </FormInput>
-      <FormInput
-        type="button"
-        id="newTransSubmit"
-        value="Add Transaction"
-      ></FormInput>
+      <div className={classes.newTransForm__actions}>
+        <button className={classes.newTransForm__btn} type="submit">
+          Add Transaction
+        </button>
+      </div>
     </form>
   );
 };
