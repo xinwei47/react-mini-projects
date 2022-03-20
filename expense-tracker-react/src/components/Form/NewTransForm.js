@@ -9,14 +9,18 @@ const NewTransForm = (props) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
 
-    const trans = {
-      id: Math.floor(Math.random() * 100000),
-      name: transName,
-      amt: transAmt,
-    };
-    props.onNewTrans(trans);
-    setTransName('');
-    setTransAmt('');
+    if (transName.trim() === '' || transAmt.trim() === '') {
+      alert('Please enter valid transaction name and amount.');
+    } else {
+      const trans = {
+        id: Math.floor(Math.random() * 100000),
+        name: transName,
+        amt: transAmt,
+      };
+      props.onNewTrans(trans);
+      setTransName('');
+      setTransAmt('');
+    }
   };
 
   const textInputHandler = (event) => {
@@ -29,22 +33,22 @@ const NewTransForm = (props) => {
 
   return (
     <form
-      action=""
+      action=''
       onSubmit={formSubmitHandler}
       className={classes.newTransForm}
     >
       <FormInput
-        type="text"
-        placeholder="Enter text..."
-        id="newTransName"
+        type='text'
+        placeholder='Enter text...'
+        id='newTransName'
         value={transName}
         onChange={textInputHandler}
       >
         Text
       </FormInput>
       <FormInput
-        type="text"
-        id="newTransAmt"
+        type='text'
+        id='newTransAmt'
         value={transAmt}
         onChange={amtInputHandler}
       >
@@ -54,7 +58,7 @@ const NewTransForm = (props) => {
         </span>
       </FormInput>
       <div className={classes.newTransForm__actions}>
-        <button className={classes.newTransForm__btn} type="submit">
+        <button className={classes.newTransForm__btn} type='submit'>
           Add Transaction
         </button>
       </div>
