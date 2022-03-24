@@ -1,0 +1,28 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #777777;
+  margin-bottom: 0.8rem;
+}
+
+input {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+input::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+}
+
+/* .invalid {
+  border: 1px solid red;
+}
+
+.valid {
+  border: 1px solid green;
+} */

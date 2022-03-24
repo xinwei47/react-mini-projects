@@ -1,0 +1,9 @@
+{
+  "short_name": "Form Validator",
+  "name": "Validate form inputs",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
