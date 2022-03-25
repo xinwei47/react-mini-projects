@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import FormInput from './FormInput';
-import useInput from '../../hooks/use-input';
+// import useInput from '../../hooks/use-input';
+import useInputReducer from '../../hooks/use-input-reducer';
 import classes from './Form.module.css';
 import ErrList from './ErrList';
 import Button from '../UI/Button';
@@ -62,7 +63,8 @@ const Form = () => {
     inputBlurHandler: usernameBlurHandler,
     inputFocusHandler: usernameFocusHandler,
     reset: usernameReset,
-  } = useInput(validateUsername);
+    // } = useInput(validateUsername);
+  } = useInputReducer(validateUsername);
 
   const {
     value: emailVal,
@@ -73,7 +75,8 @@ const Form = () => {
     inputBlurHandler: emailBlurHandler,
     inputFocusHandler: emailFocusHandler,
     reset: emailReset,
-  } = useInput(validateEmail);
+    // } = useInput(validateEmail);
+  } = useInputReducer(validateEmail);
 
   const {
     value: pwdVal,
@@ -84,7 +87,8 @@ const Form = () => {
     inputBlurHandler: pwdBlurHandler,
     inputFocusHandler: pwdFocusHandler,
     reset: pwdReset,
-  } = useInput(validatePwd);
+    // } = useInput(validatePwd);
+  } = useInputReducer(validatePwd);
 
   // ******************************
   // validate pwd2 cannot used the useInput hook
