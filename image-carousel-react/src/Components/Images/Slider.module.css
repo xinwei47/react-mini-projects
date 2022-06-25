@@ -1,0 +1,29 @@
+.slider {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+}
+
+.slider__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: 3.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  cursor: pointer;
+}
+
+.btn__left {
+  left: 3.2rem;
+}
+
+.btn__right {
+  right: 3.2rem;
+}
