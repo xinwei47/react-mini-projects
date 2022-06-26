@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Slider from './Components/Images/Slider';
+import Slider from './Components/Slider';
 import { sliderData } from './SliderData';
 import './App.css';
 

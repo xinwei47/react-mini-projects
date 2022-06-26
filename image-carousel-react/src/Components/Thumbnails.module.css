@@ -1,0 +1,20 @@
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.thumbnail-img {
+  width: 100px;
+  height: 10vh;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.thumbnail-img:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-img:not(:last-child) {
+  margin-right: 0.4rem;
+}
